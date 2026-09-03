@@ -10,6 +10,7 @@ import { SocialProofSectionComponent } from './components/social-proof-section/s
 import { FaqSectionComponent } from './components/faq-section/faq-section.component';
 import { FinalCtaSectionComponent } from './components/final-cta-section/final-cta-section.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContactModalComponent } from './components/contact-modal/contact-modal.component';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,8 @@ import { FooterComponent } from './components/footer/footer.component';
     SocialProofSectionComponent,
     FaqSectionComponent,
     FinalCtaSectionComponent,
-    FooterComponent
+    FooterComponent,
+    ContactModalComponent
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

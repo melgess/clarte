@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
+import { ContactModalService } from '../../services/contact-modal.service';
 
 @Component({
   selector: 'app-ui-button',
@@ -11,8 +12,15 @@ import { Component, Input } from '@angular/core';
   }
 })
 export class UiButtonComponent {
+  private readonly contactModal = inject(ContactModalService);
+
   @Input() href = '#';
   @Input() width = '249px';
   @Input() height = '52px';
   @Input() ariaLabel: string | null = null;
+  @Input() opensModal = true;
+
+  protected openModal(): void {
+    this.contactModal.open();
+  }
 }

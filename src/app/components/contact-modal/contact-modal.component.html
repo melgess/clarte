@@ -1,0 +1,46 @@
+@if (modal.isOpen()) {
+  <div class="modal-backdrop" (click)="closeFromBackdrop($event)">
+    <section
+      class="contact-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="contact-modal-title"
+      aria-describedby="contact-modal-description"
+    >
+      <button class="contact-modal__close" type="button" aria-label="Fechar formulário" (click)="close()">
+        <span aria-hidden="true"></span>
+      </button>
+
+      <p class="contact-modal__eyebrow">CLARTÉ</p>
+      <h2 id="contact-modal-title" class="contact-modal__title">Agende sua consulta</h2>
+      <p id="contact-modal-description" class="contact-modal__description">
+        Preencha seus dados para iniciar seu atendimento.
+      </p>
+
+      <form class="contact-modal__form" (submit)="submit($event)">
+        <label>
+          <span>Nome</span>
+          <input #nameInput type="text" name="name" autocomplete="name" placeholder="Seu nome" required>
+        </label>
+
+        <label>
+          <span>E-mail</span>
+          <input type="email" name="email" autocomplete="email" placeholder="seu@email.com" required>
+        </label>
+
+        <label>
+          <span>WhatsApp</span>
+          <input type="tel" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(21) 99999-9999" required>
+        </label>
+
+        <button class="contact-modal__submit" type="submit">ENVIAR MEUS DADOS</button>
+      </form>
+
+      @if (submitted()) {
+        <p class="contact-modal__status" role="status">
+          Dados preenchidos. O envio será conectado ao atendimento na próxima etapa.
+        </p>
+      }
+    </section>
+  </div>
+}

@@ -1,3 +1,9 @@
-<a class="ui-button" [href]="href" [attr.aria-label]="ariaLabel">
-  <ng-content />
-</a>
+@if (opensModal) {
+  <button class="ui-button" type="button" [attr.aria-label]="ariaLabel" (click)="openModal()">
+    <ng-content />
+  </button>
+} @else {
+  <a class="ui-button" [href]="href" [attr.aria-label]="ariaLabel">
+    <ng-content />
+  </a>
+}
