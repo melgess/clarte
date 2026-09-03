@@ -1,0 +1,14 @@
+<section id="duvidas" class="faq" aria-labelledby="faq-title">
+  <div class="faq__inner">
+    <header class="faq__heading">
+      <p class="faq__eyebrow"><span aria-hidden="true">–</span> DÚVIDAS FREQUENTES</p>
+      <h2 id="faq-title" class="faq__title">Perguntas frequentes</h2>
+    </header>
+
+    <div class="faq__list">
+      @for (faq of faqs; track faq.question) {
+        <app-faq-item [question]="faq.question" [answer]="faq.answer" />
+      }
+    </div>
+  </div>
+</section>

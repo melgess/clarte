@@ -1,0 +1,33 @@
+<section id="protocolo" class="protocol" aria-labelledby="protocol-title">
+  <div class="protocol__inner">
+    <div class="protocol__content">
+      <p class="protocol__eyebrow"><span aria-hidden="true">–</span> A SOLUÇÃO CLARTÉ</p>
+
+      <h2 id="protocol-title" class="protocol__title">
+        Protocolo personalizado para queda capilar
+      </h2>
+
+      <div class="protocol__description">
+        <p class="protocol__emphasis">
+          Não é implante. É ciência aplicada ao seu diagnóstico, seja qual for a causa da sua queda.
+        </p>
+        <p>
+          Depois da consulta, a <strong>Dra. Thais Junqueira</strong> monta um plano individual que pode combinar
+          diferentes frentes — sempre com o objetivo de fortalecer o fio, reduzir a queda e devolver densidade de
+          forma natural e progressiva.
+        </p>
+        <p class="protocol__emphasis">Diagnóstico primeiro, protocolo depois</p>
+      </div>
+
+      <app-ui-button href="#agendamento" width="240px" height="54px">
+        QUERO MINHA CONSULTA
+      </app-ui-button>
+    </div>
+
+    <div class="protocol__list" role="list" aria-label="Possíveis frentes do protocolo personalizado">
+      @for (treatment of treatments; track treatment; let index = $index) {
+        <app-protocol-list-item [number]="index + 1" [label]="treatment" />
+      }
+    </div>
+  </div>
+</section>

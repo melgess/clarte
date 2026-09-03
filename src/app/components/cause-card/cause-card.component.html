@@ -1,0 +1,9 @@
+<article class="cause-card">
+  <img class="cause-card__icon" [src]="icon" width="52" height="52" alt="" aria-hidden="true">
+  <h3 class="cause-card__title">{{ title }}</h3>
+  <ul class="cause-card__list">
+    @for (item of items; track item) {
+      <li>{{ item }}</li>
+    }
+  </ul>
+</article>

@@ -1,0 +1,32 @@
+<header class="header">
+  <div class="header__inner">
+    <a class="header__logo" href="#inicio" aria-label="Clarté — página inicial" (click)="closeMenu()">
+      <img src="/assets/cabecalho/logo.png" width="91" height="47" alt="Clarté — beleza e saúde integrada">
+    </a>
+
+    <button
+      class="header__menu-toggle"
+      type="button"
+      aria-label="Abrir ou fechar menu"
+      aria-controls="primary-navigation"
+      [attr.aria-expanded]="isMenuOpen()"
+      (click)="toggleMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div id="primary-navigation" class="header__navigation" [class.header__navigation--open]="isMenuOpen()">
+      <nav class="header__links" aria-label="Navegação principal">
+        @for (item of navigationItems; track item.href) {
+          <a [href]="item.href" (click)="closeMenu()">{{ item.label }}</a>
+        }
+      </nav>
+
+      <app-ui-button href="#agendamento" (click)="closeMenu()">
+        QUERO AGENDAR CONSULTA
+      </app-ui-button>
+    </div>
+  </div>
+</header>

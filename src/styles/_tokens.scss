@@ -1,0 +1,24 @@
+:root {
+  --color-white: #ffffff;
+  --color-canvas: #f5eee3;
+  --color-brand-deep: #8b5333;
+  --color-text-muted: #745745;
+  --color-surface-warm: #f0e6d6;
+  --color-surface: #f5eee2;
+  --color-border: #dedede;
+  --color-brand: #905e42;
+  --color-brand-soft: #c6aa9b;
+  --color-brand-alt: #8b5434;
+  --color-ink: #2f211b;
+  --font-sans: 'Montserrat', Arial, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --container-width: 68rem;
+  --container-gutter: clamp(1.25rem, 5vw, 4rem);
+  --radius-sm: 0.25rem;
+  --transition-fast: 180ms ease;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-16: 4rem;
+}

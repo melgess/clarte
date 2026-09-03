@@ -1,0 +1,36 @@
+<section id="causa" class="causes" aria-labelledby="causes-title">
+  <div class="causes__inner">
+    <header class="causes__heading">
+      <p class="causes__eyebrow"><span aria-hidden="true">–</span> DIAGNÓSTICO POR CAUSA</p>
+      <h2 id="causes-title" class="causes__title">
+        Cada queda capilar tem uma origem e um tratamento diferente
+      </h2>
+    </header>
+
+    <div class="causes__cards">
+      @for (cause of causes; track cause.title) {
+        <app-cause-card [title]="cause.title" [icon]="cause.icon" [items]="cause.items" />
+      }
+    </div>
+
+    <article class="truth-card">
+      <div class="truth-card__visual">
+        <img src="/assets/terceira-sessao/img-principal.png" alt="Área reservada para vídeo sobre tratamento capilar">
+        <span class="truth-card__play" aria-hidden="true"></span>
+      </div>
+
+      <div class="truth-card__content">
+        <h3 class="truth-card__title">O que não te contam sobre o tratamento capilar?</h3>
+        <ul class="truth-card__list">
+          <li>Shampoo, vitamina de prateleira ou dica de internet não funciona para todo mundo.</li>
+          <li>Muitas vezes a causa nem é hormonal, então tratamentos de suplementação não são indicados.</li>
+          <li>Pode ser uma combinação genética, nutricional e hormonal — o que exige um diagnóstico capilar correto.</li>
+          <li>Você merece um diagnóstico claro antes de investir em qualquer tratamento.</li>
+        </ul>
+        <app-ui-button href="#agendamento" width="236px" height="54px">
+          QUERO MINHA CONSULTA
+        </app-ui-button>
+      </div>
+    </article>
+  </div>
+</section>

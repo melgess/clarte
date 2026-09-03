@@ -1,0 +1,205 @@
+:host {
+  display: block;
+}
+
+.causes {
+  background-color: var(--color-surface);
+  padding: clamp(72px, 8vw, 112px) 24px;
+}
+
+.causes__inner {
+  margin-inline: auto;
+  max-width: 1088px;
+  width: 100%;
+}
+
+.causes__heading {
+  text-align: center;
+}
+
+.causes__eyebrow {
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 27px;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+
+.causes__title {
+  color: var(--color-brand-deep);
+  font-family: var(--font-serif);
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: .7px;
+  line-height: 40px;
+  margin: 0 auto;
+  max-width: 620px;
+}
+
+.causes__cards {
+  display: grid;
+  gap: 43px;
+  grid-template-columns: repeat(3, minmax(0, 334px));
+  margin-top: 50px;
+}
+
+.truth-card {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  display: grid;
+  gap: 42px;
+  grid-template-columns: 334px minmax(0, 604px);
+  height: 482px;
+  margin-top: 43px;
+  padding: 32px 59px 31px 49px;
+}
+
+.truth-card__visual {
+  height: 419px;
+  position: relative;
+  width: 334px;
+}
+
+.truth-card__visual img {
+  height: 419px;
+  object-fit: cover;
+  width: 334px;
+}
+
+.truth-card__play {
+  border: 4px solid var(--color-white);
+  border-radius: 50%;
+  height: 68px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+}
+
+.truth-card__play::before {
+  border-bottom: 13px solid transparent;
+  border-left: 19px solid var(--color-white);
+  border-top: 13px solid transparent;
+  content: '';
+  left: 26px;
+  position: absolute;
+  top: 17px;
+}
+
+.truth-card__content {
+  padding-top: 31px;
+}
+
+.truth-card__title {
+  color: var(--color-text-muted);
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin: 0 0 24px;
+}
+
+.truth-card__list {
+  color: var(--color-text-muted);
+  display: grid;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 400;
+  gap: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+  list-style: none;
+  margin: 0 0 42px;
+  padding: 0;
+}
+
+.truth-card__list li {
+  padding-left: 8px;
+  position: relative;
+}
+
+.truth-card__list li::before {
+  content: '•';
+  left: 0;
+  position: absolute;
+}
+
+@media (max-width: 1000px) {
+  .causes__cards {
+    gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .truth-card {
+    gap: 36px;
+    grid-template-columns: minmax(260px, 334px) minmax(0, 1fr);
+    height: auto;
+    min-height: 482px;
+    padding-inline: 36px;
+  }
+
+  .truth-card__visual,
+  .truth-card__visual img {
+    height: auto;
+    max-width: 334px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .causes {
+    padding: 64px 20px;
+  }
+
+  .causes__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .causes__cards {
+    grid-template-columns: 1fr;
+    margin-inline: auto;
+    max-width: 420px;
+  }
+
+  .truth-card {
+    grid-template-columns: 1fr;
+    margin-inline: auto;
+    max-width: 600px;
+    padding: 28px;
+  }
+
+  .truth-card__visual {
+    justify-self: center;
+  }
+
+  .truth-card__content {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .causes__eyebrow {
+    font-size: 9px;
+    letter-spacing: 2.3px;
+  }
+
+  .causes__title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .truth-card {
+    padding: 20px;
+  }
+
+  .truth-card__content app-ui-button {
+    --button-width: 100% !important;
+    display: flex;
+  }
+}

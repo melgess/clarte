@@ -1,0 +1,21 @@
+:host { display: block; }
+
+.skip-link {
+  left: 1rem;
+  position: fixed;
+  top: -5rem;
+  z-index: 100;
+  &:focus { top: 1rem; }
+}
+
+.eyebrow { color: var(--color-brand); margin-bottom: var(--space-4); }
+.section--light { background: var(--color-surface); }
+.section--accent {
+  background: var(--color-brand-deep);
+  color: var(--color-white);
+  .eyebrow { color: var(--color-brand-soft); }
+}
+.content-grid { display: grid; gap: var(--space-8); grid-template-columns: minmax(10rem, 0.65fr) minmax(0, 1.35fr); }
+@media (max-width: 46rem) {
+  .content-grid { grid-template-columns: 1fr; }
+}

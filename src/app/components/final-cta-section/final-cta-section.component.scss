@@ -1,0 +1,124 @@
+:host {
+  display: block;
+}
+
+.final-cta {
+  background-color: var(--color-surface);
+  padding: clamp(72px, 8vw, 112px) 24px;
+}
+
+.final-cta__inner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  max-width: 588px;
+  text-align: center;
+  width: 100%;
+}
+
+.final-cta__eyebrow {
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 27px;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+
+.final-cta__title {
+  color: var(--color-brand-deep);
+  font-family: var(--font-serif);
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: .7px;
+  line-height: 40px;
+  margin: 0;
+  max-width: 490px;
+}
+
+.final-cta__title strong {
+  font-weight: 600;
+}
+
+.final-cta__inner app-ui-button {
+  margin-top: 34px;
+}
+
+.final-cta__notice {
+  align-items: center;
+  background-color: var(--color-surface-warm);
+  box-sizing: border-box;
+  color: var(--color-brand-deep);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 20px minmax(0, 1fr) 20px;
+  height: 50px;
+  margin-top: 42px;
+  padding: 15px 17px;
+  width: 412px;
+}
+
+.final-cta__notice img {
+  height: 20px;
+  width: 20px;
+}
+
+.final-cta__notice p {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 620px) {
+  .final-cta {
+    padding: 64px 20px;
+  }
+
+  .final-cta__title {
+    font-size: 31px;
+    line-height: 37px;
+  }
+
+  .final-cta__title br {
+    display: none;
+  }
+
+  .final-cta__notice {
+    max-width: 412px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .final-cta__eyebrow {
+    font-size: 9px;
+    letter-spacing: 2.3px;
+  }
+
+  .final-cta__title {
+    font-size: 29px;
+    line-height: 34px;
+  }
+
+  .final-cta__inner app-ui-button {
+    --button-width: 100% !important;
+    align-self: stretch;
+    display: flex;
+  }
+
+  .final-cta__notice {
+    gap: 7px;
+    padding-inline: 12px;
+  }
+
+  .final-cta__notice p {
+    font-size: 17px;
+  }
+}

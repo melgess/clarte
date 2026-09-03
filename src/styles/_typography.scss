@@ -1,0 +1,32 @@
+// 22 estilos tipográficos provisórios; ajuste os valores quando o layout final chegar.
+%type-base { margin-block: 0; }
+@mixin type($family, $size, $weight, $line-height, $tracking: 0) {
+  @extend %type-base;
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  letter-spacing: $tracking;
+  line-height: $line-height;
+}
+.type-display-xl { @include type(var(--font-serif), clamp(3.5rem, 8vw, 7rem), 500, .94, -.04em); }
+.type-display-lg { @include type(var(--font-serif), clamp(3rem, 7vw, 6rem), 500, .98, -.035em); }
+.type-display-md { @include type(var(--font-serif), clamp(2.75rem, 6vw, 5rem), 500, 1, -.03em); }
+.type-display-sm { @include type(var(--font-serif), clamp(2.5rem, 5vw, 4rem), 500, 1.04, -.025em); }
+.type-heading-xl { @include type(var(--font-serif), clamp(2.25rem, 4vw, 3.5rem), 500, 1.08, -.02em); }
+.type-heading-lg { @include type(var(--font-serif), clamp(2rem, 3.5vw, 3rem), 500, 1.1, -.018em); }
+.type-heading-md { @include type(var(--font-serif), clamp(1.75rem, 3vw, 2.5rem), 600, 1.15, -.015em); }
+.type-heading-sm { @include type(var(--font-serif), clamp(1.5rem, 2.5vw, 2rem), 600, 1.2, -.01em); }
+.type-title-lg { @include type(var(--font-sans), 1.75rem, 600, 1.25, -.015em); }
+.type-title-md { @include type(var(--font-sans), 1.5rem, 600, 1.3, -.01em); }
+.type-title-sm { @include type(var(--font-sans), 1.25rem, 600, 1.35, -.005em); }
+.type-subtitle-lg { @include type(var(--font-serif), 1.5rem, 400, 1.45); }
+.type-subtitle-md { @include type(var(--font-serif), 1.25rem, 400, 1.5); }
+.type-body-xl { @include type(var(--font-sans), 1.25rem, 400, 1.65); }
+.type-body-lg { @include type(var(--font-sans), 1.125rem, 400, 1.65); }
+.type-body-md { @include type(var(--font-sans), 1rem, 400, 1.65); }
+.type-body-sm { @include type(var(--font-sans), .875rem, 400, 1.6); }
+.type-label-lg { @include type(var(--font-sans), 1rem, 600, 1.25, .01em); }
+.type-label-md { @include type(var(--font-sans), .875rem, 600, 1.25, .015em); }
+.type-label-sm { @include type(var(--font-sans), .75rem, 600, 1.25, .02em); }
+.type-overline { @include type(var(--font-sans), .75rem, 700, 1.3, .14em); text-transform: uppercase; }
+.type-caption { @include type(var(--font-sans), .75rem, 400, 1.5, .01em); }

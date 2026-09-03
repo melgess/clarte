@@ -1,0 +1,18 @@
+<section id="beneficios" class="benefits" aria-labelledby="benefits-title">
+  <div class="benefits__inner">
+    <header class="benefits__heading">
+      <p class="benefits__eyebrow"><span aria-hidden="true">–</span> DIFERENCIAIS CLARTÉ</p>
+      <h2 id="benefits-title" class="benefits__title">O que o tratamento capilar da Clarté entrega</h2>
+    </header>
+
+    <div class="benefits__cards">
+      @for (benefit of benefits; track benefit.title) {
+        <app-benefit-card
+          [icon]="benefit.icon"
+          [title]="benefit.title"
+          [description]="benefit.description"
+        />
+      }
+    </div>
+  </div>
+</section>

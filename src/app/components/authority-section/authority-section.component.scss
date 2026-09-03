@@ -1,0 +1,132 @@
+:host {
+  display: block;
+}
+
+.authority {
+  background-color: var(--color-surface);
+  padding: clamp(72px, 8vw, 112px) 24px;
+}
+
+.authority__inner {
+  align-items: center;
+  display: grid;
+  gap: 127px;
+  grid-template-columns: 413px 512px;
+  margin-inline: auto;
+  max-width: 1052px;
+  width: 100%;
+}
+
+.authority__content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.authority__eyebrow {
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 27px;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+
+.authority__title {
+  color: var(--color-brand-deep);
+  font-family: var(--font-serif);
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: .7px;
+  line-height: 40px;
+  margin: 0 0 40px;
+}
+
+.authority__description {
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 27px;
+  margin: 0 0 40px;
+  max-width: 413px;
+}
+
+.authority__description strong {
+  font-weight: 600;
+}
+
+.authority__visual,
+.authority__visual img {
+  height: 541px;
+  width: 512px;
+}
+
+.authority__visual img {
+  object-fit: contain;
+}
+
+@media (max-width: 1100px) {
+  .authority__inner {
+    gap: clamp(48px, 8vw, 100px);
+    grid-template-columns: minmax(320px, 413px) minmax(0, 512px);
+  }
+
+  .authority__visual,
+  .authority__visual img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 820px) {
+  .authority {
+    padding: 64px 20px;
+  }
+
+  .authority__inner {
+    gap: 52px;
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .authority__content {
+    max-width: 520px;
+  }
+
+  .authority__visual {
+    justify-self: center;
+    max-width: 512px;
+  }
+}
+
+@media (max-width: 480px) {
+  .authority {
+    padding-block: 52px;
+  }
+
+  .authority__eyebrow {
+    font-size: 9px;
+    letter-spacing: 2.3px;
+  }
+
+  .authority__title {
+    font-size: 32px;
+    line-height: 37px;
+    margin-bottom: 32px;
+  }
+
+  .authority__description {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .authority__content app-ui-button {
+    --button-width: 100% !important;
+    align-self: stretch;
+    display: flex;
+  }
+}

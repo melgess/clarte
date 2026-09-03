@@ -1,0 +1,144 @@
+:host {
+  display: block;
+}
+
+.protocol {
+  background-color: var(--color-surface-warm);
+  padding: clamp(72px, 8vw, 112px) 24px;
+}
+
+.protocol__inner {
+  align-items: center;
+  display: grid;
+  gap: 62px;
+  grid-template-columns: minmax(0, 513px) minmax(0, 515px);
+  margin-inline: auto;
+  max-width: 1090px;
+  min-height: 708px;
+  width: 100%;
+}
+
+.protocol__content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.protocol__eyebrow {
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  line-height: 27px;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+}
+
+.protocol__title {
+  color: var(--color-brand-deep);
+  font-family: var(--font-serif);
+  font-size: 35px;
+  font-weight: 400;
+  letter-spacing: .7px;
+  line-height: 40px;
+  margin: 0 0 34px;
+  max-width: 500px;
+}
+
+.protocol__description {
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 27px;
+  max-width: 505px;
+}
+
+.protocol__description p {
+  margin: 0 0 22px;
+}
+
+.protocol__description p:last-child {
+  margin-bottom: 0;
+}
+
+.protocol__description strong,
+.protocol__emphasis {
+  font-weight: 700;
+}
+
+.protocol__content app-ui-button {
+  margin-top: 76px;
+}
+
+.protocol__list {
+  display: grid;
+  gap: 23px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .protocol__inner {
+    align-items: start;
+    gap: clamp(36px, 5vw, 56px);
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 1fr);
+  }
+
+  .protocol__description {
+    font-size: 17px;
+    line-height: 25px;
+  }
+
+  .protocol__content app-ui-button {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 760px) {
+  .protocol {
+    padding: 64px 20px;
+  }
+
+  .protocol__inner {
+    gap: 56px;
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    min-height: 0;
+  }
+
+  .protocol__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .protocol__content app-ui-button {
+    margin-top: 40px;
+  }
+
+  .protocol__list {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .protocol__eyebrow {
+    font-size: 9px;
+    letter-spacing: 2.3px;
+  }
+
+  .protocol__title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .protocol__content app-ui-button {
+    --button-width: 100% !important;
+    align-self: stretch;
+    display: flex;
+  }
+}
