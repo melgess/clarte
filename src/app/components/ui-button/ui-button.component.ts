@@ -18,8 +18,6 @@ export class UiButtonComponent {
   @Input() width = '249px';
   @Input() height = '52px';
   @Input() ariaLabel: string | null = null;
-  @Input() opensModal = true;
-
   protected openModal(): void {
     this.contactModal.open();
   }
