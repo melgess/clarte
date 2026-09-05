@@ -10,7 +10,8 @@ describe('CausesSectionComponent', () => {
 
     expect(element.querySelectorAll('app-cause-card').length).toBe(3);
     expect(element.querySelector('.truth-card')).toBeTruthy();
-    expect(element.querySelector('.truth-card__visual img')?.getAttribute('src'))
-      .toBe('/assets/terceira-sessao/img-principal.png');
+    expect(element.querySelector('.truth-card__visual iframe')).toBeTruthy();
+    expect(element.querySelector('.truth-card__visual iframe')?.getAttribute('src'))
+      .toBe('https://www.youtube.com/embed/-RYZOyCT2HY');
   });
 });

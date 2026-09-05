@@ -10,7 +10,7 @@ describe('FooterComponent', () => {
     const instagram = element.querySelector('.footer__instagram') as HTMLAnchorElement;
 
     expect(element.querySelector('.footer__brand img')?.getAttribute('src')).toBe('/assets/rodape/logo.png');
-    expect(instagram.href).toContain('instagram.com/drathaisjunqueira');
+    expect(instagram.href).toContain('instagram.com/thaisjunqueira.dermato');
     expect(instagram.getAttribute('rel')).toContain('noopener');
   });
 });

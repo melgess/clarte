@@ -34,7 +34,10 @@
               {
                 "glob": "**/*",
                 "input": "src/assets",
-                "output": "assets"
+                "output": "assets",
+                "ignore": [
+                  "**/*.mp4"
+                ]
               }
             ],
             "styles": [
@@ -102,7 +105,10 @@
               {
                 "glob": "**/*",
                 "input": "src/assets",
-                "output": "assets"
+                "output": "assets",
+                "ignore": [
+                  "**/*.mp4"
+                ]
               }
             ],
             "styles": [
